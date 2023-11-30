@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="706.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <TextField fx:id="txtId" layoutX="41.0" layoutY="75.0" prefHeight="31.0" prefWidth="167.0" />
+      <TextField fx:id="txtName" layoutX="250.0" layoutY="75.0" prefHeight="31.0" prefWidth="242.0" />
+      <TextField fx:id="txtAddress" layoutX="537.0" layoutY="75.0" prefHeight="31.0" prefWidth="278.0" />
+      <TextField fx:id="txtSalary" layoutX="858.0" layoutY="75.0" prefHeight="31.0" prefWidth="144.0" />
+      <Label layoutX="77.0" layoutY="37.0" prefHeight="21.0" prefWidth="95.0" text="Customer ID">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="37.0" prefHeight="26.0" prefWidth="134.0" text="Customer Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="37.0" prefHeight="26.0" prefWidth="153.0" text="Customer Address">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="863.0" layoutY="37.0" prefHeight="26.0" prefWidth="134.0" text="Customer Salary">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="922.0" layoutY="131.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="31.0" prefWidth="75.0" text="Save" />
+      <TableView fx:id="tblCustomer" layoutX="41.0" layoutY="195.0" prefHeight="436.0" prefWidth="961.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="170.00003051757812" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="191.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="300.0" text="Address" />
+            <TableColumn fx:id="colSalary" prefWidth="173.0" text="Salary" />
+            <TableColumn fx:id="colOption" prefWidth="125.0" text="Option" />
+        </columns>
+      </TableView>
+      <Button layoutX="915.0" layoutY="645.0" mnemonicParsing="false" onAction="#reloadButtonOnAction" prefHeight="31.0" prefWidth="82.0" text="Reload" />
+      <Button layoutX="826.0" layoutY="131.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="31.0" prefWidth="75.0" text="Update" />
+   </children>
+</AnchorPane>
